@@ -3,13 +3,24 @@ def rectangle():
     el área y el perímetro.
     """
     pass 
-    base = int(input("Base: "))
-    altura = int(input("Altura: "))
+    numero_uno = float(input())
+    numero_dos = float(input())
+    operacion = input()
 
-    area = base * altura
-    perimetro = (2 * base) + (2 * altura)
+    if operacion == "+":
+        print(f"Resultado: {numero_uno + numero_dos}")
 
-    print(f"Base: {base}")
-    print(f"Altura: {altura}")
-    print(f"Area: {area}")
-    print(f"Perimetro: {perimetro}")
+    elif operacion == "-":
+        print(f"Resultado: {numero_uno - numero_dos}")
+
+    elif operacion == "*":
+        print(f"Resultado: {numero_uno * numero_dos}")
+
+    elif operacion == "/":
+        if numero_dos == 0:
+            print("Error: division por cero")
+        else:
+            print(f"Resultado: {numero_uno / numero_dos}")
+
+    else:
+        print("Operacion invalida")
